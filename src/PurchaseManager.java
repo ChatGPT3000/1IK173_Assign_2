@@ -1,4 +1,14 @@
+import java.util.ArrayList;
+
 public class PurchaseManager implements IPurchaseManager {
+
+    public final ArrayList<Category> categoryList;
+    public final ArrayList<Purchase> purchaseList;
+
+    public PurchaseManager(ArrayList<Category> categoryList, ArrayList<Purchase> purchaseList) {
+        this.categoryList = categoryList;
+        this.purchaseList = purchaseList;
+    }
 
     @Override
     public float sumOfMonth(int year, int month) {
