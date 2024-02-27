@@ -10,10 +10,17 @@ public class PurchaseManager implements IPurchaseManager {
         this.purchaseList = purchaseList;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public float sumOfMonth(int year, int month) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sumOfMonth'");
+        float sum = 0;
+        for (int i = 0; i < purchaseList.size(); i++) {
+            Purchase p = purchaseList.get(i);
+            if (p.date.getYear() == year && p.date.getMonth() == month) {
+                sum = sum + p.amount;
+            }
+        }
+        return sum;
     }
 
     @Override
@@ -27,5 +34,4 @@ public class PurchaseManager implements IPurchaseManager {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'yearlyAveragePerCategory'");
     }
-    
 }

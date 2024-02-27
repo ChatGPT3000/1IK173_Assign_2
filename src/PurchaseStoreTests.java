@@ -30,6 +30,12 @@ public class PurchaseStoreTests {
         purchaseList.add(new Purchase(4, new Date(2020, 1, 3), 2000, "Groceries", 2));
         purchaseList.add(new Purchase(5, new Date(2020, 2, 15), 3500, "Skiing Trip", 3));
         purchaseList.add(new Purchase(6, new Date(2020, 3, 5), 50, "Movies", 3));
+        purchaseList.add(new Purchase(1, new Date(2020, 3, 1), 5000, "Monthly Rent", 1));
+        purchaseList.add(new Purchase(2, new Date(2020, 4, 6), 30, "Burger", 2));
+        purchaseList.add(new Purchase(3, new Date(2020, 4, 7), 10, "Red Bull", 2));
+        purchaseList.add(new Purchase(4, new Date(2020, 5, 3), 2000, "Groceries", 2));
+        purchaseList.add(new Purchase(5, new Date(2020, 10, 15), 3500, "Beach Trip", 3));
+        purchaseList.add(new Purchase(6, new Date(2021, 1, 5), 50, "Movies", 3));
 
         purchaseStore = new PurchaseStore(categoryList, purchaseList);
 
@@ -40,6 +46,6 @@ public class PurchaseStoreTests {
     public void getPurchasesExpected() {
         
         Purchase[] purchases = purchaseStore.getPurchases(new Date(2020, 1, 1), new Date(2020, 2, 20));
-        
+
     }
 }

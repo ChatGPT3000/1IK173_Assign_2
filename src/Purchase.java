@@ -2,11 +2,11 @@ import java.util.Date;
 
 public class Purchase {
 
-    int id;
-    Date date;
-    float amount;
-    String comment;
-    int categoryId;
+    public int id;
+    public Date date;
+    public float amount;
+    public String comment;
+    public int categoryId;
 
     public Purchase(int id, Date date, float amount, String comment, int categoryId) {
         this.id = id;
@@ -15,5 +15,4 @@ public class Purchase {
         this.comment = comment;
         this.categoryId = categoryId;
     }
-
 }

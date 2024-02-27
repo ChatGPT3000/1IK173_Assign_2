@@ -12,7 +12,7 @@ public class PurchaseStore implements IPurchaseStore {
 
     @Override
     public Purchase[] getPurchases(Date startDate, Date endDate) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'getPurchases'");
     }
 

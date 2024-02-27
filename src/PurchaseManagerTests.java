@@ -9,6 +9,7 @@ import org.junit.Test;
 public class PurchaseManagerTests {
     public ArrayList<Category> categoryList;
     public ArrayList<Purchase> purchaseList;
+    public PurchaseManager purchaseManager;
 
     @SuppressWarnings("deprecation")
     @Before
@@ -28,5 +29,13 @@ public class PurchaseManagerTests {
         purchaseList.add(new Purchase(5, new Date(2020, 2, 15), 3500, "Skiing Trip", 3));
         purchaseList.add(new Purchase(6, new Date(2020, 3, 5), 50, "Movies", 3));
 
+        purchaseManager = new PurchaseManager(categoryList, purchaseList);
+    }
+
+    @Test
+    public void sumOfMonthTest() {
+        float testsum = 5000 + 30 + 10 + 2000;
+        float sum = purchaseManager.sumOfMonth(2020, 1);
+        assertEquals(testsum, sum, 0.01);
     }
 }
