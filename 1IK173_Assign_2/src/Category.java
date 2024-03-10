@@ -1,7 +1,12 @@
 
 public class Category {
 
-int Id;
-String Description;
+    int id;
+    String description;
+
+    public Category(int id, String desc) {
+        this.id = id;
+        description = desc;
+    }
 
 }
